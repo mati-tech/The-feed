@@ -1,4 +1,4 @@
-# News Aggregator
+# The Feed
 
 Приложение для новостей, использующее API с сайта https://newsapi.org/.
 
