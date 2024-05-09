@@ -9,15 +9,14 @@ import java.io.Serializable
 
 @Entity(
     tableName = "articles"
-
 )
 data class Article(
     //Here we need to have the primary key for the table which can be a zero and auto generated
     @PrimaryKey(autoGenerate = true)
     val id: Int? = null,
     val author: String,
-    val content: Any,
-    val description: Any,
+    val content: String,
+    val description: String,
     val publishedAt: String,
     val source: Source,
     //Source is not the datatype which can be used in our database
@@ -25,5 +24,5 @@ data class Article(
     // for that we need to first serialize the whole data we have
     val title: String,
     val url: String,
-    val urlToImage: Any
+    val urlToImage: String
 ): Serializable

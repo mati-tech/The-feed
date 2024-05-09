@@ -29,5 +29,4 @@ interface ArticleDAO {
     suspend fun deleteArticle(article: Article)
 
 
-
 }

@@ -10,7 +10,7 @@
         android:label="ArticleFragment">
         <argument
             android:name ="article"
-            app:argType="com.mati_tech_thefeed.models.Article"/>
+            app:argType="com.mati_tech.thefeed.models.Article"/>
     </fragment>
     <fragment
         android:id="@+id/headlineFragment"
