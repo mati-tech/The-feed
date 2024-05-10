@@ -44,7 +44,6 @@ https://newsapi.org/register
 Получить свой API ключ:
 Получите свой API ключ на https://newsapi.org/.
 Замените свой API ключ:
-```kotlin
+
 const val API_KEY = "e3d07fd0ceef42b594f40ef53855f3b3"
-```kotlin
-'''bash
+
