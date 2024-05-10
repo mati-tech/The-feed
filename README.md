@@ -29,7 +29,7 @@ The Feed - это приложение для Android, предназначен�
 
 **Клонировать проект:**
    ```bash
-   git clone https://github.com/mati-tech/The-feed.git '''bash
+   git clone https://github.com/mati-tech/The-feed.git 
 
 
 Клонировать с HTTPS
@@ -42,13 +42,9 @@ git@github.com:mati-tech/The-feed.git
 https://newsapi.org/register
 
 Получить свой API ключ:
-Получите свой API ключ на News API.
+Получите свой API ключ на https://newsapi.org/.
 Замените свой API ключ:
-Замените API ключ в коде проекта на свой собственный:
-
-
->Замените ваш API ключ
 ```kotlin
 const val API_KEY = "e3d07fd0ceef42b594f40ef53855f3b3"
-```
-
+```kotlin
+'''bash
