@@ -9,7 +9,16 @@
     </style>
 
     <style name="Theme.Thefeed" parent="Base.Theme.Thefeed" />
+
     <style name="App.Custom.Indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+
         <item name="android:color">@color/orange</item>
+    </style>
+    <!-- Base application theme. -->
+    <style name="action_bar" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/reddish</item>
+        <item name="colorPrimaryVariant">@color/reddish</item>
+        <item name="android:statusBarColor">@color/reddish</item>
+
     </style>
 </resources>

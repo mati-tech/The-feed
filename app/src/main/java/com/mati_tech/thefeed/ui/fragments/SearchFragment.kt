@@ -58,7 +58,7 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
             val bundle = Bundle().apply {
                 putSerializable("article", it)
             }
-            findNavController().navigate(R.id.action_searchFragment_to_articleFragment)
+            findNavController().navigate(R.id.action_searchFragment_to_articleFragment, bundle)
         }
 
 
@@ -95,7 +95,7 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
                     //o the followings
                     hideprogressbar()
                     hideErrorMessage()
-                    response.date?.let { NewsResponse ->
+                    response.data?.let { NewsResponse ->
                         newsAdapter.differ.submitList(NewsResponse.articles.toList())
                         val totalPages = NewsResponse.totalResults / Constants.QUERY_PAGE_SIZE + 2
                         islastpage = newsViewModel.searchNewsPage == totalPages
@@ -112,12 +112,11 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
         retryButton.setOnClickListener{
             if (binding.searchEdit.text.toString().isNotEmpty()) {
                 newsViewModel.searchNews(binding.searchEdit.text.toString())
-
-            }else {
+            }
+            else {
                 hideErrorMessage()
             }
         }
-
     }
 
     // Other functions we need
@@ -156,11 +155,11 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
             super.onScrolled(recyclerView, dx, dy)
             val layoutManager = recyclerView.layoutManager as LinearLayoutManager
             val firstVisibleItemPosition = layoutManager.findFirstVisibleItemPosition()
-            val visibleItemCount = layoutManager.itemCount
+            val visibleItemCount = layoutManager.childCount
             val totalItemCount = layoutManager.itemCount
 
             val isNoErrors = !isError
-            val isNotLoadingAndNotLastPage = !isloading && islastpage
+            val isNotLoadingAndNotLastPage = !isloading && !islastpage
             val isAtLastItem = firstVisibleItemPosition + visibleItemCount >= totalItemCount
             val isNotAtBeginning = firstVisibleItemPosition >= 0
             val isTotalMoreThanVisible = totalItemCount >= Constants.QUERY_PAGE_SIZE

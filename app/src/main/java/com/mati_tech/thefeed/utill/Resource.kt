@@ -8,7 +8,7 @@ sealed class Resource <T>(
     //here we made generic class of T, for the result data of the operation
     // also we have three classes for the success, error and the loading
 
-    val date: T? = null,
+    val data: T? = null,
     val message: String? = null
 ){
     class Success<T>(data: T): Resource<T>(data)

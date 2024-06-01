@@ -1,5 +1,6 @@
 package com.mati_tech.thefeed.ui.fragments
 
+
 import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -38,7 +39,7 @@ class FavouriteFragment : Fragment(R.layout.fragment_favourite) {
             val bundle = Bundle().apply {
                 putSerializable("article", it)
             }
-            findNavController().navigate(R.id.action_favouriteFragment_to_articleFragment)
+            findNavController().navigate(R.id.action_favouritesFragment_to_articleFragment, bundle)
         }
 
 
@@ -69,7 +70,6 @@ class FavouriteFragment : Fragment(R.layout.fragment_favourite) {
 
                 }
             }
-
         }
         ItemTouchHelper(itemTouchHelperCallback).apply {
             attachToRecyclerView(binding.recyclerFavourites)
@@ -79,15 +79,12 @@ class FavouriteFragment : Fragment(R.layout.fragment_favourite) {
         })
     }
 
-
     private fun setupFavoriteRecycler(){
         newsAdapter = NewsAdapter()
         binding.recyclerFavourites.apply {
             //means the items will be listed vertically
             adapter = newsAdapter
             layoutManager = LinearLayoutManager(activity)
-
-
 
         }
 

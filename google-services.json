@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "247247756252",
+    "project_id": "thefeed-c3d89",
+    "storage_bucket": "thefeed-c3d89.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:247247756252:android:e304754c71d2c23cb88d19",
+        "android_client_info": {
+          "package_name": "com.mati_tech.thefeed"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBf3hmRFV8E4lyc6dEqvYPiPub2dI3VhQY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

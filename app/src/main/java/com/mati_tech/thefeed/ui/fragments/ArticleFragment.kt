@@ -16,10 +16,8 @@ import com.mati_tech.thefeed.ui.Viewmodels.NewsViewModel
 
 class ArticleFragment : Fragment(R.layout.fragment_article) {
 
-
     lateinit var newsViewModel : NewsViewModel
     val args : ArticleFragmentArgs by navArgs()
-
     lateinit var binding : FragmentArticleBinding
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -31,7 +29,7 @@ class ArticleFragment : Fragment(R.layout.fragment_article) {
 
         binding.webView.apply {
             webViewClient = WebViewClient()
-            args.article.url?.let {
+            article.url?.let {
                 loadUrl(it)
             }
         }

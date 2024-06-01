@@ -2,30 +2,30 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/news_nav_graph"
-    app:startDestination="@id/headlineFragment">
+    app:startDestination="@id/headlinesFragment">
 
     <fragment
         android:id="@+id/articleFragment"
         android:name="com.mati_tech.thefeed.ui.fragments.ArticleFragment"
         android:label="ArticleFragment">
         <argument
-            android:name ="article"
+            android:name="article"
             app:argType="com.mati_tech.thefeed.models.Article"/>
     </fragment>
     <fragment
-        android:id="@+id/headlineFragment"
-        android:name="com.mati_tech.thefeed.ui.fragments.HeadlineFragment"
-        android:label="HeadlineFragment" >
+        android:id="@+id/headlinesFragment"
+        android:name="com.mati_tech.thefeed.ui.fragments.HeadlinesFragment"
+        android:label="HeadlinesFragment" >
         <action
-            android:id="@+id/action_headlineFragment_to_articleFragment"
+            android:id="@+id/action_headlinesFragment_to_articleFragment"
             app:destination="@id/articleFragment" />
     </fragment>
     <fragment
-        android:id="@+id/favouriteFragment"
+        android:id="@+id/favouritesFragment"
         android:name="com.mati_tech.thefeed.ui.fragments.FavouriteFragment"
-        android:label="FavouriteFragment" >
+        android:label="FavouritesFragment" >
         <action
-            android:id="@+id/action_favouriteFragment_to_articleFragment"
+            android:id="@+id/action_favouritesFragment_to_articleFragment"
             app:destination="@id/articleFragment" />
     </fragment>
     <fragment
@@ -35,5 +35,6 @@
         <action
             android:id="@+id/action_searchFragment_to_articleFragment"
             app:destination="@id/articleFragment" />
+
     </fragment>
 </navigation>

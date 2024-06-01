@@ -9,13 +9,13 @@
 
     </item>
     <item
-        android:id="@+id/Favorite_Fragment"
+        android:id="@+id/favouritesFragment"
         android:title="Favourites"
         android:icon="@drawable/favorite_border">
 
     </item>
     <item
-        android:id="@+id/Search_Fragment"
+        android:id="@+id/searchFragment"
         android:title="Search"
         android:icon="@drawable/search">
 

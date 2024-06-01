@@ -29,7 +29,4 @@ interface NewsApi {
         apikey :String = API_KEY
     ): Response<NewsResponse>
 
-
-
-
 }
