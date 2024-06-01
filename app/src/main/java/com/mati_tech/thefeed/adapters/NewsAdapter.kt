@@ -170,7 +170,7 @@
 //        onItemClickListener = listener
 //    }
 //}
-
+//
 package com.mati_tech.thefeed.adapters
 
 import android.view.LayoutInflater
@@ -239,4 +239,6 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.ArticleViewHolder>() {
         onItemClickListener = listener
     }
 }
+
+
 
